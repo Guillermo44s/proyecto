@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() , OnClickListener{
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         binding.buttonSave.setOnClickListener(this)
+        binding.buttonDelete.setOnClickListener(this)
         binding.buttonGoView.setOnClickListener(this)
 
         enableEdgeToEdge()
@@ -64,6 +65,7 @@ class MainActivity : AppCompatActivity() , OnClickListener{
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.buttonSave -> saveData()
+            R.id.buttonDelete -> deleteData()
             R.id.buttonGoView -> goToView()
         }
     }
